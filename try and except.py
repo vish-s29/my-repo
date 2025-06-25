@@ -345,3 +345,67 @@ def main():
      y=cubesum(x)
      print("sum of first n num",x,y)
 main()
+
+
+
+
+#done by baba
+#do the
+numbers = {}
+n = int(input("Please enter? "))
+
+for i in range(n):
+    key = input(f"Enter key {i+1}: ")
+    value = int(input(f"Enter value for key '{key}': "))
+    numbers[key] = value
+
+max_key = max(numbers, key=numbers.get)
+max_value = numbers[max_key]
+
+print(f"\nDictionary entered: {numbers}")
+print(f"Max value is {max_value} for key '{max_key}'")
+
+
+
+x=input("enter a sentence:")
+words=x.split()
+#for i in x:
+     #print("the words are",x)
+dict = {}
+for word in words:
+     if word in dict:
+         dict[word]=dict[word]+1
+     else:
+         dict[word] = 1
+
+print(dict)
+
+#program for creating contact details via dictionary
+try:
+    dict={
+       #"vishaka":"9901565503"
+    }
+    n=int(input("enter the number of contacts u want to add"))
+    #key=dict[n]
+    #value=dict[x]
+
+    #for key,value in dict.items():
+    for i in range(n):
+        key=input("enter name:")
+        value=input(f"enter the contact no.for '{key}':")
+        dict[key]=value
+    names = (dict)
+  
+    if len(value)==10:
+             print("the name and contact number is:",names)
+    else:
+     #print("the name and contact number is:",key,value)
+         
+          print("invalid! pls enter a 10 digit number")
+     
+
+except ValueError:
+    print("enter integers")
+
+contacts = {}
+
