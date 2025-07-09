@@ -1,3 +1,49 @@
+#calculator test question
+def main():
+    print("hi welcome!\n What would u like to calculate")
+    print("1.addition")
+    print("2.subtraction")
+    print("3.multiplication")
+    print("4.division")
+    print("5.exit")
+    choose=input("enter from the given options")
+    
+    if choose=='1':
+        print(addi())
+    elif choose=='2':
+        print(sub())
+    elif choose=='3':
+        print(mult())
+    elif choose=='4':
+        print(div())
+    else:
+        print(ext())
+    
+def addi():
+    a=int(input("enter num1: "))
+    b=int(input("enter num2: "))
+    return("the addition of two numbers is",a+b)
+
+def sub():
+    a=int(input("enter num1: "))
+    b=int(input("enter num2: "))
+    return("the subtraction of two numbers is",a-b)
+
+def mult():
+    a=int(input("enter num1: "))
+    b=int(input("enter num2: "))
+    return("the multiplication of two numbers is",a*b)
+
+def div():
+    a=int(input("enter num1: "))
+    b=int(input("enter num2: "))
+    return("the division of two numbers is",a/b)
+
+def ext():
+    return("Thankyou!visit again!")
+
+main()
+
 # calculator 
 def grp(a,b):
    choice = input("enter desired option")
@@ -363,3 +409,88 @@ for i in dict:
         c=dict[b]>dict[a]
 
 print(max(dict))
+
+
+#adding contacts
+contacts = {}
+n = int(input("How many contacts do you want to save? "))
+   
+for i in range(n):
+    name = input(f"Enter name for contact {i+1}: ")
+    phone = input(f"Enter phone number for {name}: ")
+    contacts[name] = phone
+    
+    print("Saved Contacts:")
+    for name, number in contacts.items():
+     print(f"{name}: {number}")
+     
+while True:
+        y=input("\n Enter name to search : ").strip()
+        if y in contacts:
+           print(f"found {y} -> {contacts[y]}")
+           break
+        else:
+           print("contacts not found")
+           print("do u want to add this contact?")
+           print("1.yes, 2.no")
+           choose = input("enter option")
+        if choose=='1':
+              n = int(input("How many contacts do you want to save? "))
+              
+              for i in range(n):
+                name = input(f"Enter name for contact {i+1}: ")
+                phone = input(f"Enter phone number for {name}: ")
+                contacts[name] = phone
+                print("Saved Contacts:")
+                for name, number in contacts.items():
+                   print(f"{name}: {number}")
+        elif choose =='2':
+                break
+        s= input("enter the contact that u would like to delete")
+        if s in contacts:
+                print(contacts.pop(s))
+                print(f"deleted{s} in contacts")
+        else:
+                print("cant delete")
+                z=("the remaining contacts after deleting is:",contacts)
+                print(z)
+                
+        print("do you want to delete all the contacts from the contact list?")
+        print("1.yes or 2.no")
+        d= input("choose the desired option")
+        if d=='1':
+           print(contacts.clear(d))
+        elif d=='2':
+           print ("not required")
+
+
+           contacts={}
+print("do you want to delete all the contacts from the contact list?")
+print("1.yes or 2.no")
+d=input("choose the desired option")
+
+if d=='1':
+    print(contacts.clear())
+    z=("the remaining contacts after deleting is:",contacts)
+    print(z)
+
+elif d=='2':
+    print ("not required")
+    
+
+
+def max_min(list):
+   # list=[]
+    a=max(list)
+    print("the maximum number from the given array is",a)
+    b=min(list)
+    print("the minimum number from the given array is",b)
+    print(type(list))
+max_min([1,2,3,4])
+
+#print number in ascending and descending order
+#in ascending order in list[tc]
+#cube sum of n numbers
+def cubdesum(n):
+    return sum(i**3)for i in range(1,n+1))
+        
