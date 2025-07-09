@@ -1024,3 +1024,19 @@ for i in range(n):
       if store[max1]>store[i+1]:
          store[max1],store[i+1] = store[i+1],store[max1]
          print(j,max1)
+
+
+#max in dictionary
+numbers = {}
+n=int(input("enter the numbers:"))
+
+for i in range(n):
+    key = input(f"enter key{i+1}")
+    value = int(input(f"enter the value for key'{key}': "))
+    numbers[key] = value
+
+max1 = max(numbers,key = numbers.get)
+max2 = numbers[max1]
+
+print(f"\ndictionary entered:{numbers}")
+print(f"max value is {max1} for key {max2}")
