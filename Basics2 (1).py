@@ -428,6 +428,42 @@ except Exception as e:
 ###how to set the time?
 
 
+while True:
+             print("hello!\n what would u like to do?\n 1.add task\n 2.mark as done\n 3.delete task\n 4.view tasks\n 5.Exit")
+             import array
+             task=array.array('b',[])   ### will not work here bcoz it is integer and python doesnt support!!
+             
+             d=input("pls choose from the given options:") 
+             if d == '1':
+
+                c = int(input("enter the number of tasks u want to add: "))
+                for i in range(c):
+                          b = i+1
+                          f = input(f"enter task for {b}: ")
+                          g = [str(x) for x in task]
+                          task.append(f)
+                          print (g)
+                        
+             if d == '2':
+                   c = input("which task do u want to mark as done?")
+                   if c in g:
+                        print( "this task is completed")
+                        
+             if d == '3':
+                  s = input("which task do u want to delete?")
+
+                  if s in g:
+                       print(g.remove(s))
+                       print(f"deleted{s} in list, the remaing tasks are:",g)
+
+             if d == '4':
+                         print("viewing the tasks")
+                         print (g)
+                       
+             if d == '5':
+                    print("thankyou!")
+                    break
+
 
 ##array for contacts project
 from array import array
@@ -454,3 +490,161 @@ def main():
 
        if c=='2':
            
+
+#Consider the text file, “Std.txt”, with the details of students like SRN,
+# NAME, SEMESTER, SECTION AND AVG_MARKS. Read the file, “Std.txt”
+# and display the details of all the students of 4th Semester “A” Section who
+# have scored more than 75%. 
+
+#A “CAR” has the attributes COMPANY_NAME, MODEL, COLOR,
+#MANUFACUTING_YEAR and PRICE. A Class is required to be created for
+#“CAR” to store the above attributes and perform the following
+#operations:
+#Get the details of “CAR” object from user and store into Array of objects ------->call the function in the method
+#Display the details of “CAR” object based on “COMPANY”, “MODEL” and
+# “PRICE”. 
+
+####This is how the program has to be written and called @Vishaka.
+
+###to ask baba to help me understand this code:
+##using for loop
+#n=[2,4,1,3]
+#for i in range(0,len(n)):
+   # for j in range(i,len(n)):
+         
+         #if n[i] < n[j]:
+           #  Temp = n[i]
+           #  n[i]=n[j]
+           #  n[j] = Temp
+    #print(n[i])
+
+##using while loop
+#a=input("enter a number")
+#b=input("enter another number")
+#while a>b:
+   # print(a)
+    #break
+
+##how to write without hard coding?
+a=[2,4,3,1]
+i=a[0]
+j=a[1]
+k=a[2]
+l=a[3]
+while i<j:
+    print(i,j)
+    break
+while k>i:
+    print(i,k)
+    break
+while j>k:
+    print(i,k,j)
+    break
+while l<i:
+    print(l,i,k,j)
+    break
+
+def get_account_details(name,pin,bal):
+        name = input("enter name of account holder")
+        pin = int(input("enter pin num"))
+        bal = float(input("enter balance amt"))
+        accounts = account(name,pin,bal)
+        return accounts
+print("\nEnter user details")
+account_holder = input("Enter account holder: ")
+account_number = float(input("Enter account number: "))
+balance = float(input("Enter balance: "))
+get_account_details(account_holder,account_number,balance)
+           
+
+##account details
+## based on the input: shld get stored and get the output:
+class account:
+    def __init__(self, account_holder, account_number, balance):
+        self.account_holder = account_holder
+        self.account_number = account_number
+        self.balance = balance
+
+    def dis(self):
+        print(f"acccount holder:{self.account_holder}, account number:{self.account_number},balance: {self.balance}")
+
+
+from array import array
+
+def main():
+    accountdetails= []                
+    Account= array('i', [])   
+    num = int(input("Enter number of accounts to input: "))
+    for i in range(num):
+         print(f"\nEnter user details for account {i + 1}:")
+         name = input("enter name of account holder: ")
+         pin = int(input("enter pin num: "))
+         bal = float(input("enter balance amt: "))
+         accounts = account(name,pin,bal)
+         accountdetails.append(accounts)
+         #Account.append(len(accountdetails)) 
+    return accountdetails
+main()
+
+class ss:
+    def __init__(self, account_holder):
+        self.account_holder = account_holder
+        #self.account_number = account_number
+        #self.balance = balance
+
+def name():
+    name = input("enter name of account holder: ")
+    accountt = ss(name)
+    return accountt
+class w:
+    def __init__(self,account_number):
+        self.account_number = account_number
+
+def pin():
+    pin = int(input("enter pin num: "))
+    accounts = w(pin)
+    return accounts
+class j:
+    def __init__(self,balance):
+        self.balance = balance
+def bal():
+    bal = float(input("enter balance amt: "))
+    accounts = j(bal)
+    return accounts
+
+
+  #program for lcm 
+# Logic:
+# Determine the larger of the two numbers.
+# Start checking multiples of the larger number, incrementing until a number is found that is divisible by both input numbers.
+
+   
+def fun():
+     a = int(input("enter num1:"))
+     b = int(input("enter num2:"))
+     c = max(a,b)
+     d = min(a,b)
+     for i in range(c,a*b+1 ,c):
+        if i % d == 0:
+         return i 
+
+print(fun())
+
+a = int(input("enter num1:"))
+b = int(input("enter num2:"))
+c = max(a,b)
+d = min(a,b)
+for i in range(c,a*b-1 ,c):
+        if i % c == 0:
+         print (i)
+    
+##to understand
+
+#same program in while
+a=[1,2,3,4]
+j=a[0]
+#k=a[1]
+while i in a:
+      j=i
+      print(j)
+      break

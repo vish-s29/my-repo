@@ -1,26 +1,27 @@
-#program for lcm 
-# Logic:
-# Determine the larger of the two numbers.
-# Start checking multiples of the larger number, incrementing until a number is found that is divisible by both input numbers.
+#class------> important
+##how to write this in terms of array???
+class mult():
+    def __init__(self,x):
+        self.x = x
 
-   
-def fun():
-     a = int(input("enter num1:"))
-     b = int(input("enter num2:"))
-     c = max(a,b)
-     d = min(a,b)
-     for i in range(c,a*b+1 ,c):
-        if i % d == 0:
-         return i 
+    def disp(self):
+        for i in range(1,11):
+             i=i*self.x
+             print(f"the tables of {self.x} is: {i}")
 
-print(fun())
+#c = input("enter a num to multiply")
+multiply = mult(2)
+multiply.disp()
 
-a = int(input("enter num1:"))
-b = int(input("enter num2:"))
-c = max(a,b)
-d = min(a,b)
-for i in range(c,a*b-1 ,c):
-        if i % c == 0:
-         print (i)
+         
+
+     
     
+
+
+    
+    
+          
+
+
 

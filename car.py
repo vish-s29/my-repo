@@ -46,3 +46,19 @@ search_price = float(input("Enter Price to Search: "))
 display_filtered_cars(cars, search_company, search_model, search_price)
               
 
+#
+
+#array without import array
+##with class
+n=[1,2,3,4]
+m=n[0]
+for i in n:
+     if i > m:
+          m=i
+print(m)
+
+class math():
+    def __init__(self,x):
+         self.x = x
+
+    def dis(self):
